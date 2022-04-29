@@ -168,7 +168,7 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void failingTest(){
+    public void failingTest1(){
         fail();
     }
     
