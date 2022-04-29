@@ -168,8 +168,13 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void failingTest1(){
-        fail();
+    public void testfile9(){
+        try {
+            assertEquals(List.of(),
+                    MarkdownParse.getLinks(readString("test-file9.md")));
+        } catch (IOException e) {
+            fail();
+        }
     }
     
 }
