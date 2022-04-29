@@ -29,9 +29,7 @@ public class MarkdownParse {
             if (closeParen == -1) {
                 break;
             }
-            // if (markdown.indexOf("!", currentIndex) ==  (openBracket - 1)) {
-                
-            // }
+
             if (closeBracket == openParen - 1 && closeBracket > openBracket &&
             closeBracket > openBracket + 1 && (openBracket == 0 ||
             markdown.charAt(openBracket - 1) != '!')) {
@@ -39,13 +37,10 @@ public class MarkdownParse {
                 currentIndex = closeParen + 1;
             } else {
                 currentIndex = closeBracket + 1;
-            }            
+            }     
         }
-
         return toReturn;
     }
-
-// javac MarkdownParse.java && java MarkdownParse test-file3.md
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
@@ -54,5 +49,4 @@ public class MarkdownParse {
 	    System.out.println(links);
     }
 }
-        // System.out.println("HELLO REMEMBER TO REMOVE ME!");
 
