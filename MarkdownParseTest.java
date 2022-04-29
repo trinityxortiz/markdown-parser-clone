@@ -1,5 +1,12 @@
-import static org.junit.Assert.*;
+////////////////////////////////////////////////////////////////////////////////
+// Name: Trinity Ortiz
+// Couse: CSE 15L - Spring 2022
+////////////////////////////////////////////////////////////////////////////////
+// javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java 
+// java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
+////////////////////////////////////////////////////////////////////////////////
 
+import static org.junit.Assert.*;
 import java.io.IOException;
 import java.util.List;
 import java.io.IOException;
@@ -158,6 +165,11 @@ public class MarkdownParseTest {
        } catch (IOException e) {
            fail();
        }
+    }
+
+    @Test
+    public void failingTest(){
+        fail();
     }
     
 }
