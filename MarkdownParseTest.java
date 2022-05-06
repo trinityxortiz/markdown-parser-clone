@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Name: Trinity Ortiz
-// Couse: CSE 15L - Spring 2022
+// Course: CSE 15L - Spring 2022
 ////////////////////////////////////////////////////////////////////////////////
 // javac -cp ".;lib\junit-4.13.2.jar;lib\hamcrest-core-1.3.jar" MarkdownParseTest.java 
 // java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore MarkdownParseTest
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
+import java.nio.file.Path; 
 import java.util.ArrayList;
 import org.junit.*;
 
@@ -34,7 +34,6 @@ public class MarkdownParseTest {
             assertEquals(List.of("https://something.com", "some-thing.html"), 
             MarkdownParse.getLinks(readString("test-file1a.md")));
         } catch (IOException e) {
-            fail();
         }
         
     }
@@ -45,7 +44,6 @@ public class MarkdownParseTest {
             assertEquals(List.of("https://github.com/dmontefalcon/markdown-parser", 
             "https://youtube.com"), MarkdownParse.getLinks(readString("test-file2a.md")));
         } catch (IOException e) {
-            fail();
         }
         
     }
@@ -56,7 +54,6 @@ public class MarkdownParseTest {
             assertEquals(List.of("https://youtube.com"), 
             MarkdownParse.getLinks(readString("test-file3a.md")));
         } catch (IOException e) {
-            fail();
         }
         
     }
@@ -67,23 +64,11 @@ public class MarkdownParseTest {
             assertEquals(List.of("https://gmail.com"), 
             MarkdownParse.getLinks(readString("test-file4a.md")));
         } catch (IOException e) {
-            fail();
+
         }
         
     }
 
-    // @Test
-    // public void testFile5test() {
-    //     try {
-    //         assertEquals(MarkdownParse.getLinks(readString("test-file5.md")), 
-    //         List.of(""));
-    //     } catch (IOException e) {
-    //         fail();
-    //     }
-        
-    // }
-
-    
     @Test
     public void testFiletest() {
         try {
@@ -91,7 +76,6 @@ public class MarkdownParseTest {
             "some-thing.html"), 
             MarkdownParse.getLinks(readString("test-file.md")));
         } catch (IOException e) {
-            fail();
         }
         
     }
@@ -103,7 +87,7 @@ public class MarkdownParseTest {
             "some-page.html"), 
             MarkdownParse.getLinks(readString("test-file2.md")));
         } catch (IOException e) {
-            fail();
+        
         }
     }
 
@@ -113,7 +97,7 @@ public class MarkdownParseTest {
             assertEquals(List.of(),
             MarkdownParse.getLinks(readString("test-file3.md")));
         } catch (IOException e) {
-            fail();
+        
         }
     }
 
@@ -123,7 +107,7 @@ public class MarkdownParseTest {
             assertEquals(List.of(),
             MarkdownParse.getLinks(readString("test-file4.md")));
         } catch (IOException e) {
-            fail();
+        
         }
     }
 
@@ -133,7 +117,7 @@ public class MarkdownParseTest {
             assertEquals(List.of(),
             MarkdownParse.getLinks(readString("test-file5.md")));
         } catch (IOException e) {
-            fail();
+        
         }
     }
 
@@ -143,7 +127,7 @@ public class MarkdownParseTest {
             assertEquals(List.of(),
             MarkdownParse.getLinks(readString("test-file6.md")));
         } catch (IOException e) {
-            fail();
+        
         }
     }
 
@@ -153,7 +137,7 @@ public class MarkdownParseTest {
            assertEquals(List.of(),
                    MarkdownParse.getLinks(readString("test-file7.md")));
        } catch (IOException e) {
-           fail();
+        
        }
     }
      
@@ -163,7 +147,7 @@ public class MarkdownParseTest {
            assertEquals(List.of(),
                    MarkdownParse.getLinks(readString("test-file8.md")));
        } catch (IOException e) {
-           fail();
+
        }
     }
 
@@ -173,7 +157,7 @@ public class MarkdownParseTest {
             assertEquals(List.of(),
                     MarkdownParse.getLinks(readString("test-file9.md")));
         } catch (IOException e) {
-            fail();
+
         }
     }
     
