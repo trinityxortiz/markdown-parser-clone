@@ -25,19 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
+      # Compile and test Markdown Parser
+      - name: Compile and test
+        run: make test
 
           
-      # Runs jUnit Compile command
-      - name: Run jUnit compiling line
-        run: javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
-        
-      # Runs jUnit Run Command
-      - name: Run jUnit test file
-        run: java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+     
